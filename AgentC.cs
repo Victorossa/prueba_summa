@@ -28,27 +28,49 @@ namespace PruebaTecnicaSuma
             return median;
         }
 
+
         public string GetStaircase(int n)
         {
-            // Verificar restricciones
-            if (n <= 0 || n >= 100)
+            if (n < 1 || n > 100)
             {
-                throw new ArgumentOutOfRangeException("El tamaño de la escalera debe estar entre 0 y 100.");
+                throw new ArgumentException("El valor de n debe estar entre 1 y 100");
             }
 
-            // Imprimir la escalera alineada al centro
-            string staircase = "";
-            int half = n / 2;
+            int lineaCent = (n * 2) + 2;
+            int espacios = (lineaCent / 2) - 2;
+            int simbolos = espacios + 1;
 
-            for (int i = 0; i < n; i++)
+            string escalera = "";
+
+            for (int i = 0; i < lineaCent; i++)
             {
-                string spaces = new string(' ', Math.Abs(half - i));
-                string hashtags = new string('#', n - 2 * Math.Abs(half - i));
-                staircase += spaces + hashtags + "\n";
+                string linea = "";
+                for (int j = 0; j < espacios; j++)
+                {
+                    linea += ".";
+                }
+                for (int j = 0; j < simbolos; j++)
+                {
+                    linea += "#";
+                }
+                escalera += linea + "\n";
+
+                // Actualiza espacios y símbolos
+                if (i < n - 1)
+                {
+                    espacios--;
+                    simbolos += 2;
+                }
+                else
+                {
+                    espacios++;
+                    simbolos -= 2;
+                }
             }
 
-            return staircase;
+            return escalera;
         }
+
     }
 }
 

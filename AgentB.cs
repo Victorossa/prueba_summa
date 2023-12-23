@@ -15,7 +15,7 @@ namespace PruebaTecnicaSuma
                 throw new ArgumentException("La lista de datos no puede ser nula o vacía.");
             }
 
-            // Calcular la media armónica
+            // Calcular la media armónica de la serie de datos
             double harmonicMean = data.Count / data.Sum(x => 1.0 / x);
 
             return harmonicMean;

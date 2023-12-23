@@ -21,22 +21,35 @@ namespace PruebaTecnicaSuma
 
             // Ejemplo de uso con AgentC
             IAgent agentC = new AgentC();
-            TestAgent(agentC, new List<double> { 3, 1, 4, 1, 5, 9, 2, 6 });
+            TestAgent(agentC, new List<double> { 3, 1, 4, 1, 5, 9, 2, 6 , 9});
 
             Console.ReadKey();
 
         }
 
+        // Recibe como parametros una instancia de los agentes que implementan la interface y procesa segun lo que le llegue
         static void TestAgent(IAgent agent, List<double> data)
         {
-            // Calcular y mostrar el resultado del agente
+            // FUNCIONALIDAD 1
             double result = agent.CalculateResult(data);
             Console.WriteLine($"Resultado: {result}");
 
-            // Imprimir la escalera
-            Console.WriteLine("Escalera:");
-            Console.WriteLine(agent.GetStaircase(6));  // Cambia el tamaño según tus necesidades
+            // FUNCIONALIDAD 2
+            Console.Write("Ingrese el tamaño de la escalera: ");
+            string inputSize = Console.ReadLine();
+
+            if (int.TryParse(inputSize, out int size))
+            {
+                Console.WriteLine("Escalera:");
+                Console.WriteLine(agent.GetStaircase(size));
+            }
+            else
+            {
+                Console.WriteLine("El tamaño de la escalera debe ser un número válido.");
+            }
+
             Console.WriteLine();
         }
+
     }
 }
