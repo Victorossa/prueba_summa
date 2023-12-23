@@ -1,74 +1,42 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aplicacion
+namespace PruebaTecnicaSuma
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            // Ejemplo de uso con AgentA
+            IAgent agentA = new AgentA();
+            TestAgent(agentA, new List<double> { 2, 4, 6, 8, 10 });
+
+            // Ejemplo de uso con AgentB
+            IAgent agentB = new AgentB();
+            TestAgent(agentB, new List<double> { 1, 2, 3, 4, 5 });
+
+            // Ejemplo de uso con AgentC
+            IAgent agentC = new AgentC();
+            TestAgent(agentC, new List<double> { 3, 1, 4, 1, 5, 9, 2, 6 });
+
+            Console.ReadKey();
 
         }
 
-        // Función para imprimir una escalera de tamaño n
-        static void ImprimirEscalera(int n)
+        static void TestAgent(IAgent agent, List<double> data)
         {
-            for (int i = 1; i <= n; i++)
-            {
-                string espacios = new string(' ', n - i);
-                string escalon = new string('#', i);
-                Console.WriteLine(espacios + escalon);
-            }
+            // Calcular y mostrar el resultado del agente
+            double result = agent.CalculateResult(data);
+            Console.WriteLine($"Resultado: {result}");
+
+            // Imprimir la escalera
+            Console.WriteLine("Escalera:");
+            Console.WriteLine(agent.GetStaircase(6));  // Cambia el tamaño según tus necesidades
+            Console.WriteLine();
         }
     }
-
-    class AgenteA
-        {
-            public double ObtenerMediaAritmetica(double[] datos)
-            {
-                return datos.Length > 0 ? datos.Average() : 0;
-            }
-        }
-
-        class AgenteB
-        {
-            public double ObtenerMediaArmonica(double[] datos)
-            {
-                if (datos.Length == 0)
-                    return 0;
-
-                double sumaInversos = datos.Sum(dato => 1 / dato);
-                return datos.Length / sumaInversos;
-            }
-        }
-
-        class AgenteC
-        {
-            public double ObtenerMediana(double[] datos)
-            {
-                if (datos.Length == 0)
-                    return 0;
-
-                double[] datosOrdenados = datos.OrderBy(dato => dato).ToArray();
-                int n = datosOrdenados.Length;
-
-                if (n % 2 == 0)
-                {
-                    // Cantidad de datos par
-                    int medio1 = n / 2 - 1;
-                    int medio2 = n / 2;
-                    return (datosOrdenados[medio1] + datosOrdenados[medio2]) / 2;
-                }
-                else
-                {
-                    // Cantidad de datos impar
-                    int medio = n / 2;
-                    return datosOrdenados[medio];
-                }
-            }
-        }
-    }
-
+}

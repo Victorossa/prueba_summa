@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentA.cs" />
+    <Compile Include="AgentB.cs" />
+    <Compile Include="AgentC.cs" />
+    <Compile Include="AgentProvider.cs" />
+    <Compile Include="IAgent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
