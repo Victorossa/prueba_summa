@@ -14,3 +14,11 @@ C:\Pruebas CSharp\csharpya\Aplicacion\obj\Debug\PruebaTecnicaSuma.csproj.Suggest
 C:\Pruebas CSharp\csharpya\Aplicacion\obj\Debug\PruebaTecnicaSuma.csproj.CoreCompileInputs.cache
 C:\Pruebas CSharp\csharpya\Aplicacion\obj\Debug\PruebaTecnicaSuma.exe
 C:\Pruebas CSharp\csharpya\Aplicacion\obj\Debug\PruebaTecnicaSuma.pdb
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\bin\Debug\PruebaTecnicaSuma.exe.config
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\bin\Debug\PruebaTecnicaSuma.exe
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\bin\Debug\PruebaTecnicaSuma.pdb
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\obj\Debug\PruebaTecnicaSuma.csproj.AssemblyReference.cache
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\obj\Debug\PruebaTecnicaSuma.csproj.SuggestedBindingRedirects.cache
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\obj\Debug\PruebaTecnicaSuma.csproj.CoreCompileInputs.cache
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\obj\Debug\PruebaTecnicaSuma.exe
+C:\Pruebas CSharp\PruebaTecnicaVictorOssa\Aplicacion\obj\Debug\PruebaTecnicaSuma.pdb
