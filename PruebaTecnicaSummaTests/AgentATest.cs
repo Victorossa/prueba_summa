@@ -13,6 +13,7 @@ namespace PruebaTecnicaSummaTests
         [Fact]
         public void CalculateResult_ValidData_ReturnsCorrectAverage()
         {
+
             // QUE CALCULE EL PROMEDIO
             // Arrange
             var agentA = new AgentA();
